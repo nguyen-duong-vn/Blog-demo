@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Home Page</h1>
+<table>
+    <caption>Category List</caption>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr th:each="category: ${categoryList}">
+            <td>
+                <a th:href="@{/category/{id}(id=${category.id})}" th:text="${category.id}"></a>
+            </td>
+            <td>
+                <a th:href="@{/category/{id}(id=${category.id})}" th:text="${category.name}"></a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
